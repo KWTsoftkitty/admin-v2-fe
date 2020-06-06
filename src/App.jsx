@@ -13,7 +13,6 @@ class App extends React.Component{
                 <Layout>
                     <Switch>
                         <Route exact path="/" component={Home}></Route>
-                        <Redirect from="*" to="/"/>
                     </Switch>
                 </Layout>
             </Router>
