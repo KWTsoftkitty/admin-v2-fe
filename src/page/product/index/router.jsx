@@ -1,11 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 
-class CategorySelector extends React.Component{
+// 页面
+import ProductList from 'page/product/index/index.jsx'
+import ProductSave from 'page/product/index/save.jsx'
+
+class ProductRouter extends React.Component{
     render(){
         return(
-            <div></div>
+            <Switch>
+                <Route path="/product/index" component={ProductList} />
+                <Route path="/product/save" component={ProductSave} />
+                <Redirect exact from="/product" to="/product/index" />
+            </Switch>
         )
     }
 }
 
-export default CategorySelector;
+export default ProductRouter;
